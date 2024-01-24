@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 21:04:42 by maxime            #+#    #+#             */
-/*   Updated: 2023/12/14 11:01:17 by maxime           ###   ########.fr       */
+/*   Updated: 2024/01/24 10:37:41 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PARDON
-#define PARDON
+#ifndef _PARDON_
+#define _PARDON_
 
 #include "AForm.hpp"
 

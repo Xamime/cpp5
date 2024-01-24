@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 21:03:29 by maxime            #+#    #+#             */
-/*   Updated: 2023/12/11 16:27:01 by maxime           ###   ########.fr       */
+/*   Updated: 2024/01/24 10:36:41 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef _TREE_
+#define _TREE_
 
 #include "AForm.hpp"
 
@@ -28,3 +31,5 @@ class ShrubberyCreationForm : public virtual AForm
     private:
         void        treestyle() const;
 };
+
+#endif

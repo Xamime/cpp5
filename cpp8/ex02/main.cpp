@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 13:39:17 by maxime            #+#    #+#             */
-/*   Updated: 2024/01/19 18:27:22 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/21 13:56:10 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int main()
         ++it;
     }
     std::stack<int> s(mstack);
+    s.pop();
+    std::cout << s.top() << std::endl;
     std::list<int> myList;
     myList.push_back(1);
     myList.push_back(10);
