@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 12:38:37 by maxime            #+#    #+#             */
-/*   Updated: 2023/12/12 10:19:40 by maxime           ###   ########.fr       */
+/*   Updated: 2024/01/24 16:09:52 by mdesrose         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ Bureaucrat::Bureaucrat(std::string const & name, int grade): _name(name)
 
 Bureaucrat::Bureaucrat(Bureaucrat const & ref): _name(ref.getName())
 {
+    _grade = ref.getGrade();
     *this = ref; 
 }
 
@@ -88,7 +89,7 @@ void    Bureaucrat::signForm(Form & src)
     }
     catch (std::exception & e)
     {
-        std::cerr <<  _name << " couldn't signed : " << src.getName() << " because ";
+        std::cerr <<  _name << " couldn't signed : " << src.getName() << " because :";
         std::cerr << e.what() << '\n';
     }
     if (src.getSign())

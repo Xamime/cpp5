@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 12:39:33 by maxime            #+#    #+#             */
-/*   Updated: 2023/12/14 16:59:23 by maxime           ###   ########.fr       */
+/*   Updated: 2024/01/24 16:52:22 by mdesrose         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,39 +19,43 @@
 
 int main(void)
 {
-    Bureaucrat jean("grade1", 1);
-    Bureaucrat toto("grade50", 50);
-    Bureaucrat boulard("grade150", 150);
+    Bureaucrat grade1("grade1", 1);
+    Bureaucrat grade50("grade50", 50);
+    Bureaucrat grade150("grade150", 150);
 	RobotomyRequestForm robotomy("tommy");
 	PresidentialPardonForm pardon("bandito");
 	ShrubberyCreationForm myTree("tree");
 
 
+		std::cout << "\ntest signForm\n\n";
 		
-		boulard.signForm(robotomy);
-		boulard.signForm(myTree);
-		boulard.signForm(pardon);
-		toto.signForm(robotomy);
-		toto.signForm(myTree);
-		toto.signForm(pardon);
-		jean.signForm(robotomy);
-		jean.signForm(myTree);
-		jean.signForm(pardon);
+		grade150.signForm(robotomy);
+		grade150.signForm(myTree);
+		grade150.signForm(pardon);
+		grade50.signForm(robotomy);
+		grade50.signForm(myTree);
+		grade50.signForm(pardon);
+		grade1.signForm(robotomy);
+		grade1.signForm(myTree);
+		grade1.signForm(pardon);
 		
-		boulard.executeForm(robotomy);
-		boulard.executeForm(myTree);
-		boulard.executeForm(pardon);
-		toto.executeForm(robotomy);
-		toto.executeForm(myTree);
-		toto.executeForm(pardon);
-		jean.executeForm(robotomy);
-		jean.executeForm(myTree);
-		jean.executeForm(pardon);
+		std::cout << "\ntest executeForm\n\n";
 
-		std::cout << "test overload\n";
-		std::cout << jean << std::endl;
+		grade150.executeForm(robotomy);
+		grade150.executeForm(myTree);
+		grade150.executeForm(pardon);
+		grade50.executeForm(robotomy);
+		grade50.executeForm(myTree);
+		grade50.executeForm(pardon);
+		grade1.executeForm(robotomy);
+		grade1.executeForm(myTree);
+		grade1.executeForm(pardon);
+
+		std::cout << "\ntest overload\n\n";
+		std::cout << grade1 << std::endl;
 		std::cout << robotomy << std::endl;
 		std::cout << myTree << std::endl;
 		std::cout << pardon << std::endl;
+
 	return (0);
 }

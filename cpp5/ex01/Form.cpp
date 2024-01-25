@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 20:36:44 by maxime            #+#    #+#             */
-/*   Updated: 2023/12/13 15:48:04 by maxime           ###   ########.fr       */
+/*   Updated: 2024/01/24 15:56:51 by mdesrose         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,6 @@ Form::~Form()
 std::string Form::getName() const
 {
     return _name;
-}
-
-void Form::setSign(bool sign)
-{
-    _is_signed = sign;
 }
 
 bool Form::getSign() const

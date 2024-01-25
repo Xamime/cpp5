@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 16:11:01 by maxime            #+#    #+#             */
-/*   Updated: 2023/12/13 16:10:46 by maxime           ###   ########.fr       */
+/*   Updated: 2024/01/24 16:54:52 by mdesrose         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 PresidentialPardonForm::PresidentialPardonForm() : AForm::AForm("PresidentialPardonForm", "NULL", 25, 5)
 {
 }
-
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target) : AForm::AForm("PresidentialPardonForm", target, 25, 5)
 {
@@ -32,19 +31,14 @@ void    PresidentialPardonForm::execute(Bureaucrat const & executor) const
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& other)
 {
-    // TODO: Implement copy constructor
     (void)other;
 }
 
 PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& other)
 {
-    if (this != &other)
-    {
-        // TODO: Implement copy assignment
-    }
+    (void)other;
     return *this;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm() {
-    // TODO: Implement destructor
 }

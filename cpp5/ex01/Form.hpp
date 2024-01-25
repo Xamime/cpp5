@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 19:59:43 by maxime            #+#    #+#             */
-/*   Updated: 2023/12/13 15:55:32 by maxime           ###   ########.fr       */
+/*   Updated: 2024/01/24 15:56:57 by mdesrose         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class Form
         ~Form();
 
         std::string getName() const;
-        void        setSign(bool sign);
         bool        getSign() const;
         int         getSignGrade() const;
         int         getExecGrade() const;
