@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 13:41:26 by maxime            #+#    #+#             */
-/*   Updated: 2023/12/19 15:45:07 by maxime           ###   ########.fr       */
+/*   Updated: 2024/01/30 15:45:48 by mdesrose         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,7 @@ Base *generate(void)
     else
         return ( new C );
 }
-/*
-If the cast is successful, dynamic_cast returns a value of type target-type <A&*>.
-If the cast fails and target-type is a pointer type, it returns a null pointer of that type.
-If the cast fails and target-type is a reference type, it throws an exception that matches a handler of type std::bad_cast.
-*/
+
 void    identify(Base* p)
 {
     if (dynamic_cast<A*>(p))

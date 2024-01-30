@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 11:45:17 by maxime            #+#    #+#             */
-/*   Updated: 2023/12/18 14:53:21 by maxime           ###   ########.fr       */
+/*   Updated: 2024/01/30 16:42:45 by mdesrose         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 #define SCALARCONV_HPP
 
 #include <iostream>
-#include "regex.h"
-#include <cstdlib>
+#include <limits>
 
 class ScalarConverter
 {
@@ -40,7 +39,6 @@ class ScalarConverter
     private:
 
         static e_type   _type;
-        static bool     _negative;
         static char     _c;
         static float    _f;
         static double   _d;

@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 13:55:48 by maxime            #+#    #+#             */
-/*   Updated: 2023/12/18 15:47:38 by maxime           ###   ########.fr       */
+/*   Updated: 2024/01/30 16:42:46 by mdesrose         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
 ScalarConverter::e_type ScalarConverter::_type = ScalarConverter::Null;
-bool                    ScalarConverter::_negative = false;
 char                    ScalarConverter::_c = 0;
 float                   ScalarConverter::_f = 0.0f;
 double                  ScalarConverter::_d = 0.0;
@@ -56,8 +55,6 @@ ScalarConverter::e_type	ScalarConverter::DetermineType(std::string input)
 		return (Char);
 	if (input == "nan" || input == "nanf")
 		return (Nan);
-	if (input[0] == '-')
-		_negative = true;
 	if (input[0] == '-' || input[0] == '+')
 		input = input.substr(1);
     max	= input.length();
@@ -79,6 +76,8 @@ ScalarConverter::e_type	ScalarConverter::DetermineType(std::string input)
 	}
 	if (isDouble)
 		return (Double);
+    else if (strtoll(input.c_str(), NULL, 0) > std::numeric_limits<int>::max())    
+        return (Null);
 	else
 		return (Int);
 }
@@ -94,19 +93,19 @@ void ScalarConverter::convert(std::string str)
        _d = static_cast<double>(_c);
        _i = static_cast<int>(_c);
     }
-    if (_type == Int){
+    else if (_type == Int){
         _i = atoi(str.c_str());
         _f = static_cast<float>(_i);
         _d = static_cast<double>(_i);
         _c = static_cast<char>(_i);
     }
-    if (_type == Float){
+    else if (_type == Float){
         _f = strtof(str.c_str(), NULL);
         _i = static_cast<int>(_f);
         _d = static_cast<double>(_f);
         _c = static_cast<char>(_f);
     }
-    if (_type == Double || _type == Inf || _type == Nan){
+    else if (_type == Double || _type == Inf || _type == Nan){
         _d = strtod(str.c_str(), NULL);
         _i = static_cast<int>(_d);
         _f = static_cast<float>(_d);
@@ -132,5 +131,4 @@ ScalarConverter& ScalarConverter::operator=(const ScalarConverter& other)
 }
 
 ScalarConverter::~ScalarConverter() {
-    // TODO: Implement destructor
 }
