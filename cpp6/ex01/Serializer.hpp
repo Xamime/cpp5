@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 15:59:12 by maxime            #+#    #+#             */
-/*   Updated: 2023/12/18 16:40:27 by maxime           ###   ########.fr       */
+/*   Updated: 2024/01/30 15:41:03 by mdesrose         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef _serializer_
+#define _serializer_
 
 #include <iostream>
 #include <stdint.h>
@@ -31,3 +34,5 @@ class Serializer
         static Data* deserialize(uintptr_t raw);
     private:
 };
+
+#endif

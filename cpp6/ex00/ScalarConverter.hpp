@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 11:45:17 by maxime            #+#    #+#             */
-/*   Updated: 2024/01/25 11:57:11 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/31 11:50:24 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define SCALARCONV_HPP
 
 #include <iostream>
-#include <cstdlib>
+#include <limits>
 
 class ScalarConverter
 {
@@ -39,7 +39,6 @@ class ScalarConverter
     private:
 
         static e_type   _type;
-        static bool     _negative;
         static char     _c;
         static float    _f;
         static double   _d;
