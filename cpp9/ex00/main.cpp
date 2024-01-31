@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 14:14:54 by mdesrose          #+#    #+#             */
-/*   Updated: 2024/01/25 16:14:14 by mdesrose         ###   ########.fr       */
+/*   Updated: 2024/01/29 15:25:48 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,12 @@
 
 void    check_date_format(std::string str)
 {
-    if (str[])
+    if (str[4] != '-' || str[7] != '-')
+    {
+        std::cout << "Bad format." << std::endl;
+        throw std::exception();
+    }
+    
 }
 
 int main(int argc, char *argv[])
@@ -36,17 +41,26 @@ int main(int argc, char *argv[])
 	}
     try
     {
+        int i = 0;
         while (getline(infile, line))
 	    {
-		    std::cout << line << std::endl;
+            if (i == 0 && line != "date | value")
+            {
+                std::cout << "Bad format" << std::endl;
+                throw std::exception();
+            }
+            else if (i == 0)
+            {
+                i++;
+                continue;
+            }
+            check_date_format(line);
+            i++;
 	    }
     }
     catch(const std::exception& e)
     {
-        std::cerr << e.what() << '\n';
     }
-    
-    
     infile.close();
     return 0;
 }
