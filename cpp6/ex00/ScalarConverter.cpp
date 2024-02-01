@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 13:55:48 by maxime            #+#    #+#             */
-/*   Updated: 2024/01/30 16:42:46 by mdesrose         ###   ########.fr       */
+/*   Updated: 2024/01/31 19:03:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,14 @@ void    ScalarConverter::print()
         std::cout << "int: impossible" << std::endl;
     else
         std::cout << "int: " << _i << std::endl;
+    std::cout << std::fixed;
+    std::cout.precision(5);
     std::cout << "float: " << _f;
-    if (static_cast<float>(_i) == _f)
-        std::cout << ".0f" << std::endl;
-    else
-        std::cout << "f" << std::endl;
+
+    std::cout << "f" << std::endl;
+    std::cout << std::fixed;
+    std::cout.precision(14);
     std::cout << "double: " << _d;
-    if (static_cast<double>(_i) == _d)
-        std::cout << ".0";
     std::cout << std::endl;
 }
 

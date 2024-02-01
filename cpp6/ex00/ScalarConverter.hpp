@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 11:45:17 by maxime            #+#    #+#             */
-/*   Updated: 2024/01/31 11:50:24 by marvin           ###   ########.fr       */
+/*   Updated: 2024/01/31 12:11:42 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 
 #include <iostream>
 #include <limits>
-
+#include <fstream>
+#include <cstdlib>
+#include <cstring>
+#include <sstream>
 class ScalarConverter
 {
     public:
