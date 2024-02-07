@@ -3,18 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: maxime <maxime@student.42.fr>              +#+  +:+       +#+         #
+#    By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/20 19:46:40 by maxime            #+#    #+#              #
-#    Updated: 2023/12/20 19:46:46 by maxime           ###   ########.fr        #
+#    Updated: 2024/02/05 16:03:01 by mdesrose         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = 	main.cpp 
 		
 NAME = ex01
-CXX = clang++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+CXX = c++
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJ = $(SRC:cpp=o)
 
 all: $(NAME)

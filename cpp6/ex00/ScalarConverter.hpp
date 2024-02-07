@@ -6,7 +6,7 @@
 /*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 11:45:17 by maxime            #+#    #+#             */
-/*   Updated: 2024/01/30 16:42:45 by mdesrose         ###   ########.fr       */
+/*   Updated: 2024/02/01 16:18:38 by mdesrose         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <limits>
+#include <cstdlib>
 
 class ScalarConverter
 {
@@ -38,11 +39,12 @@ class ScalarConverter
 
     private:
 
-        static e_type   _type;
-        static char     _c;
-        static float    _f;
-        static double   _d;
-        static int      _i;
+        static e_type       _type;
+        static char         _c;
+        static float        _f;
+        static double       _d;
+        static int          _i;
+        static long long    _ll;
 };
 
 

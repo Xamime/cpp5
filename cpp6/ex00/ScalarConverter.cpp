@@ -6,7 +6,7 @@
 /*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 13:55:48 by maxime            #+#    #+#             */
-/*   Updated: 2024/01/30 16:42:46 by mdesrose         ###   ########.fr       */
+/*   Updated: 2024/02/01 16:24:27 by mdesrose         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char                    ScalarConverter::_c = 0;
 float                   ScalarConverter::_f = 0.0f;
 double                  ScalarConverter::_d = 0.0;
 int                     ScalarConverter::_i = 0;
+long long               ScalarConverter::_ll = 0;
 
 const char *ScalarConverter::CannotConvert::what(void) const throw()
 {
@@ -31,7 +32,7 @@ void    ScalarConverter::print()
         std::cout << "char: " << _c << std::endl;
     else
         std::cout << "char: Non displayable" << std::endl;
-    if (_type == Nan || _type == Inf)
+    if (_type == Nan || _type == Inf || _ll < -2147483648 || _ll > 2147483647)
         std::cout << "int: impossible" << std::endl;
     else
         std::cout << "int: " << _i << std::endl;
@@ -76,8 +77,6 @@ ScalarConverter::e_type	ScalarConverter::DetermineType(std::string input)
 	}
 	if (isDouble)
 		return (Double);
-    else if (strtoll(input.c_str(), NULL, 0) > std::numeric_limits<int>::max())    
-        return (Null);
 	else
 		return (Int);
 }
@@ -94,18 +93,21 @@ void ScalarConverter::convert(std::string str)
        _i = static_cast<int>(_c);
     }
     else if (_type == Int){
+        _ll = atoll(str.c_str());
         _i = atoi(str.c_str());
         _f = static_cast<float>(_i);
         _d = static_cast<double>(_i);
         _c = static_cast<char>(_i);
     }
     else if (_type == Float){
+        _ll = atoll(str.c_str());
         _f = strtof(str.c_str(), NULL);
         _i = static_cast<int>(_f);
         _d = static_cast<double>(_f);
         _c = static_cast<char>(_f);
     }
     else if (_type == Double || _type == Inf || _type == Nan){
+        _ll = atoll(str.c_str());
         _d = strtod(str.c_str(), NULL);
         _i = static_cast<int>(_d);
         _f = static_cast<float>(_d);

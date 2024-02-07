@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Array.hpp                                          :+:      :+:    :+:   */
+/*   Swap.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maxime <maxime@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mdesrose <mdesrose@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 16:25:58 by maxime            #+#    #+#             */
-/*   Updated: 2023/12/19 17:08:34 by maxime           ###   ########.fr       */
+/*   Updated: 2024/02/05 16:08:50 by mdesrose         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ARRAY_H
-#define ARRAY_H
+#ifndef SWAP_H
+#define SWAP_H
 
 template<typename T>
 void    swap(T& a, T& b)
